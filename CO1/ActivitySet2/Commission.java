@@ -22,7 +22,7 @@ public class Commission {
                 commission  = salesAmount * 0.08;
 
             salesAmount++;
-        } while (commission < 30000);
+        } while (commission < 25000);
         System.out.println("Minimum sales in order to make $30,000 : " + salesAmount);
     }
 }
