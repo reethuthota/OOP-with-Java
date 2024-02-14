@@ -14,7 +14,7 @@ class Order {
         System.out.println("Status of order 1 : " + status);
     }
 
-    public Order(int orderId, String orderedFoods) {
+    Order(int orderId, String orderedFoods) {
         this.orderId = orderId;
         this.orderedFoods = orderedFoods;
         this.status = "Ordered"; 
