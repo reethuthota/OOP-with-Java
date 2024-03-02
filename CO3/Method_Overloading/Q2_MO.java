@@ -29,5 +29,7 @@ public class Q2_MO {
 
         System.out.println("Enter three integer values: " );
         ob.add(sc.nextInt(),sc.nextInt(),sc.nextInt());
+
+        sc.close();
     }
 }
