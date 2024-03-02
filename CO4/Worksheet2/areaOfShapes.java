@@ -1,6 +1,6 @@
 // Create an abstract class shape with abstract method to calculate area of various shapes like rectangle, triangle, square and non-abstract method to get corresponding inputs for area calculation.
 
-package Worksheet2;
+
 import java.util.*;
 
 abstract class shape {

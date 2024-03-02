@@ -1,7 +1,6 @@
 // Create a class Bank and define final method to display fixed loan amount of Rs.1500000 of personal loan and implement various methods to display various loan schemes.
 // If age is <=25 eligible for education loan of 10,00,000 if age >25 and <=45 eligible for fixed loan amount, if age >45 and <=60 eligible for house loan of 20,00,000
 
-package Worksheet2;
 import java.util.*;
 
 class Bank {
