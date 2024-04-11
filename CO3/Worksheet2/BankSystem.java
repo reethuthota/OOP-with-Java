@@ -11,41 +11,30 @@ import java.util.Scanner;
 class Account {
     double balance;
 
-    public Account() {
-        this.balance = 0.0;
+    void deposit(double amount) {
+        balance += amount;
     }
 
-    public void deposit(double amount) {
-        this.balance += amount;
-    }
-
-    public boolean withdraw(double amount) {
-        if (amount <= this.balance) {
-            this.balance -= amount;
-            return true;
+    void withdrawal(double amount) {
+        if (balance >= amount) {
+            balance -= amount;
+            System.out.println("Successful Withdrawal");
         } else {
-            System.out.println("Insufficient funds.");
-            return false;
+            System.out.println("Insufficient balance");
         }
     }
 
-    public double getBalance() {
+    double getBalance() {
         return this.balance;
     }
+
 }
 
 class SavingsAccount extends Account {
-    double interestRate;
-
-    public SavingsAccount() {
-        this.balance = 0.0;
-        this.interestRate = 0.06; // 6% interest rate
-    }
-
-    public void computeInterest() {
-        double interest = this.balance * this.interestRate;
-        System.out.println("Interest earned: " + interest);
-        this.balance += interest;
+    double interestRate = 0.06;
+    void SimpleInterest() {
+        double interest = balance * interestRate;
+        System.out.println("Interest : " + interest);
     }
 }
 
@@ -57,53 +46,49 @@ class CurrentAccount extends Account {
 
 public class BankSystem {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
-        SavingsAccount savingsAccount = new SavingsAccount();
-        CurrentAccount currentAccount = new CurrentAccount();
+        SavingsAccount account1 = new SavingsAccount();
+        CurrentAccount account2 = new CurrentAccount();
 
-        while (true) {
+        while(true) {
             System.out.println("\n1. Deposit");
             System.out.println("2. Withdraw");
             System.out.println("3. Display Balance");
             System.out.println("4. Compute SI for Savings Account");
             System.out.println("5. Exit");
             System.out.print("Enter your choice: ");
-            int choice = scanner.nextInt();
+            int choice = scan.nextInt();
 
             switch (choice) {
                 case 1:
                     System.out.print("Enter amount to deposit: ");
-                    double depositAmount = scanner.nextDouble();
-                    savingsAccount.deposit(depositAmount);
-                    currentAccount.deposit(depositAmount);
+                    double depositAmount = scan.nextDouble();
+                    account1.deposit(depositAmount);
+                    account2.deposit(depositAmount);
                     System.out.println("Deposit successful.");
                     break;
                 case 2:
                     System.out.print("Enter amount to withdraw: ");
-                    double withdrawAmount = scanner.nextDouble();
-                    boolean success = savingsAccount.withdraw(withdrawAmount);
-                    if (success) {
-                        currentAccount.withdraw(withdrawAmount);
-                        System.out.println("Withdrawal successful.");
-                    }
+                    double withdrawAmount = scan.nextDouble();
+                    account1.withdrawal(withdrawAmount);
+                    account2.withdrawal(withdrawAmount);
                     break;
                 case 3:
-                    System.out.println("Savings Account Balance: " + savingsAccount.getBalance());
-                    System.out.println("Current Account Balance: " + currentAccount.getBalance());
+                    System.out.println("Savings Account Balance: " + account1.getBalance());
+                    System.out.println("Current Account Balance: " + account2.getBalance());
                     break;
                 case 4:
-                    savingsAccount.computeInterest();
+                    account1.SimpleInterest();
                     break;
                 case 5:
                     System.out.println("Exiting...");
-                    scanner.close();
+                    scan.close();
                     System.exit(0);
                     break;
                 default:
                     System.out.println("Invalid choice. Please try again.");
             }
-        }
-
+        } 
     }
 }
