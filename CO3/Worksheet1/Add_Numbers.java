@@ -1,25 +1,23 @@
+package Worksheet1;
+
 import java.util.*;
-class Addition
-{
-    void add(int a, int b)
-    {
+class Addition {
+    void add(int a, int b) {
         System.out.println("The sum of two integer values: "+(a+b));
     }
 
-    void add(int a, int b, float x)
-    {
+    void add(int a, int b, float x) {
         System.out.println("The sum of two integer values and a float value: "+(a+b+x));
     }
 
-    void add(int i, int j , int k)
-    {
+    void add(int i, int j , int k) {
         System.out.println("The sum of three integer values: "+(i+j+k));
     }
 }
-public class Q2_MO {
-    public static void main(String args[])
-    {
-        Scanner sc=new Scanner(System.in);
+public class Add_Numbers {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        
         System.out.println("Enter two integer values: ");
         Addition ob=new Addition();
         ob.add(sc.nextInt(),sc.nextInt());

@@ -1,3 +1,4 @@
+package Worksheet1;
 import java.util.Scanner;
 
 class AreaCalculator {
@@ -15,7 +16,7 @@ class AreaCalculator {
     }
 }
 
-public class method_overloading1 {
+public class Area_Calculation {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
