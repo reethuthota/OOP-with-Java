@@ -1,4 +1,4 @@
-// Write a Java program to create a vehicle class hierarchy. The base class should be Vehicle, with subclasses bike, Car and van. Each subclass should have properties such as make, model, year, and fuel type. Implement methods for calculating fuel efficiency, mileage. (fuel efficiency=no.of kilometres travelled/no. of litres consumed, mileage= no.of kilometres travelled/litre).
+// Write a Java program to create a vehicle class hierarchy. The base class should be Vehicle, with subclasses bike, car and van. Each subclass should have properties such as make, model, year, and fuel type. Implement methods for calculating fuel efficiency, mileage. (fuel efficiency=no.of kilometres travelled/no. of litres consumed, mileage= no.of kilometres travelled/litre).
 package Activity2;
 
 class Vehicle {
@@ -14,8 +14,8 @@ class Vehicle {
     }
 }
     
-class bike extends Vehicle{
-    void initial(String model, String make, String fuelType, int year) {
+class Bike extends Vehicle {
+    public Bike (String model, String make, String fuelType, int year) {
         this.model = model;
         this.make = make;
         this.fuelType = fuelType;
@@ -25,8 +25,8 @@ class bike extends Vehicle{
     }
 }
 
-class car extends Vehicle{
-    void initial(String model, String make, String fuelType, int year) {
+class Car extends Vehicle {
+    public Car (String model, String make, String fuelType, int year) {
         this.model = model;
         this.make = make;
         this.fuelType = fuelType;
@@ -36,8 +36,8 @@ class car extends Vehicle{
     }
 }
 
-class van extends Vehicle{
-    void initial(String model, String make, String fuelType, int year) {
+class Van extends Vehicle {
+    public Van (String model, String make, String fuelType, int year) {
         this.model = model;
         this.make = make;
         this.fuelType = fuelType;
@@ -49,19 +49,16 @@ class van extends Vehicle{
 
 public class Vehicles {
     public static void main(String[] args) {
-        bike bike1 = new bike();
-        bike1.initial("Hunter","Royal Enfield", "petrol", 2023);
-        bike1.fuelEfficiency(250.0,15.0);
-        bike1.mileage(20,1);
+        Bike vehicle1 = new Bike("Hunter","Royal Enfield", "petrol", 2023);;
+        vehicle1.fuelEfficiency(250.0,15.0);
+        vehicle1.mileage(20,1);
 
-        car car1 = new car();
-        car1.initial("Compass","Jeep", "diesel", 2022);
-        car1.fuelEfficiency(500.0, 40.0);
-        car1.mileage(30,1);
+        Car vehicle2 = new Car("Compass","Jeep", "diesel", 2022);
+        vehicle2.fuelEfficiency(500.0, 40.0);
+        vehicle2.mileage(30,1);
 
-        van van1 = new van();
-        van1.initial("Omni","Maruti", "petrol", 2015);
-        van1.fuelEfficiency(1000.0,10.0);
-        van1.mileage(10,1);
+        Van vehicle3 = new Van("Omni","Maruti", "petrol", 2015);
+        vehicle3.fuelEfficiency(1000.0,10.0);
+        vehicle3.mileage(10,1);
     }
 }
