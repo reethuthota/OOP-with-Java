@@ -6,7 +6,7 @@ import java.util.*;
 abstract class shape {
     abstract void area();
     void input() {
-    }
+    };
 }
 
 class Rectangle extends shape {
