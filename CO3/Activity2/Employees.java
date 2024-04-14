@@ -7,7 +7,7 @@ class Employee {
     double salary;
 
     Employee() {
-        System.out.println("displayed the details of employee");
+        System.out.println("Employee Details");
     }
 
     void Salary() {
@@ -23,7 +23,7 @@ class Employee {
 }
 
 class Teacher extends Employee{
-    Teacher(String name, String address, String jobTitle, double salary) {
+    public Teacher(String name, String address, String jobTitle, double salary) {
         super();
         this.name = name;
         this.address = address;
@@ -60,17 +60,17 @@ class Professor extends Employee{
 
 public class Employees {
     public static void main(String[] args) {
-        Teacher teacher1 = new Teacher("Monish", "Bengaluru", "Assistant Teacher", 5000);
+        Teacher teacher1 = new Teacher("Monish", "Bengaluru", "Assistant Teacher", 30000);
         teacher1.Salary();
         teacher1.Bonus();
         teacher1.PerformanceReport();
 
-        Lecturer lecturer1 = new Lecturer("Shreyas", "Bengaluru", "Assistant Lecturer", 6000);
+        Lecturer lecturer1 = new Lecturer("Shreyas", "Bengaluru", "Assistant Lecturer", 40000);
         lecturer1.Salary();
         lecturer1.Bonus();
         lecturer1.PerformanceReport();
 
-        Professor professor1 = new Professor("Reethu", "Bengaluru", "HOD", 10000);
+        Professor professor1 = new Professor("Reethu", "Bengaluru", "HOD", 50000);
         professor1.Salary();
         professor1.Bonus();
         professor1.PerformanceReport();
