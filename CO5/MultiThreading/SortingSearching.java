@@ -63,6 +63,12 @@ public class SortingSearching {
         Sorting t1 = new Sorting(array);
         t1.start();
 
+        try {
+            t1.join();
+        } catch (InterruptedException e) {
+            System.out.println(e);
+        }
+
         Searching t2 = new Searching(array, target);
         t2.start();
     }
