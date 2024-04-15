@@ -18,6 +18,7 @@ class Rectangle extends Shape {
         this.width = width;
     }
 
+    @Override
     double calculateArea() {
         return length * width;
     }
@@ -30,6 +31,7 @@ class Circle extends Shape {
         this.radius = radius;
     }
 
+    @Override
     double calculateArea() {
         return 3.14 * radius * radius;
     }

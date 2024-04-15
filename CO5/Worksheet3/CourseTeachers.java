@@ -31,7 +31,7 @@ class StudentB extends Thread {
     StudentB(Course c) {
         this.c = c;
     }
-
+    
     public synchronized void run() {
         c.getCourseTeacher();
     }
@@ -49,4 +49,3 @@ public class CourseTeachers {
         stB.start();
     }
 }
-

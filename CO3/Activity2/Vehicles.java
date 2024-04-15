@@ -1,4 +1,5 @@
 // Write a Java program to create a vehicle class hierarchy. The base class should be Vehicle, with subclasses bike, car and van. Each subclass should have properties such as make, model, year, and fuel type. Implement methods for calculating fuel efficiency, mileage. (fuel efficiency=no.of kilometres travelled/no. of litres consumed, mileage= no.of kilometres travelled/litre).
+
 package Activity2;
 
 class Vehicle {

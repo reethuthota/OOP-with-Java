@@ -4,18 +4,25 @@ package Activity2;
 
 class Employee {
     String name, address, jobTitle;
-    double salary;
+    double BaseSalary;
 
-    Employee() {
+    Employee(String name, String address, String jobTitle, double BaseSalary) {
         System.out.println("Employee Details");
+
+        this.name = name;
+        this.address = address;
+        this.jobTitle = jobTitle;
+        this.BaseSalary = BaseSalary;
+
+        System.out.println(name + " " + address + " " + jobTitle + " " + BaseSalary);
     }
 
     void Salary() {
-        double salary=(30000+(0.12*30000)+(0.07*30000));
-        System.out.println(salary);
+        double salary=(BaseSalary+(0.12*BaseSalary)+(0.07*BaseSalary));
+        System.out.println("Total Salary : " + salary);
     }
     void Bonus() {
-        System.out.println(0.02*30000);
+        System.out.println("Bonus : " + 0.02*BaseSalary);
     }
     void PerformanceReport() {
         System.out.println("excellent");
@@ -23,38 +30,20 @@ class Employee {
 }
 
 class Teacher extends Employee{
-    public Teacher(String name, String address, String jobTitle, double salary) {
-        super();
-        this.name = name;
-        this.address = address;
-        this.jobTitle = jobTitle;
-        this.salary = salary;
-
-        System.out.println(name + " " + address + " " + jobTitle + " " + salary);
+    public Teacher(String name, String address, String jobTitle, double BaseSalary) {
+        super(name, address, jobTitle, BaseSalary);
     }
 }
 
 class Lecturer extends Employee{
-    Lecturer(String name, String address, String jobTitle, double salary) {
-        super();
-        this.name = name;
-        this.address = address;
-        this.jobTitle = jobTitle;
-        this.salary = salary;
-
-        System.out.println(name + " " + address + " " + jobTitle + " " + salary);
+    Lecturer(String name, String address, String jobTitle, double BaseSalary) {
+        super(name, address, jobTitle, BaseSalary);;
     }
 }
 
 class Professor extends Employee{
-    Professor(String name, String address, String jobTitle, double salary) {
-        super();
-        this.name = name;
-        this.address = address;
-        this.jobTitle = jobTitle;
-        this.salary = salary;
-
-        System.out.println(name + " " + address + " " + jobTitle + " " + salary);
+    Professor(String name, String address, String jobTitle, double BaseSalary) {
+        super(name, address, jobTitle, BaseSalary);
     }
 }
 

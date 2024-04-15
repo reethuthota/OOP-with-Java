@@ -40,7 +40,6 @@ public class Area_Calculation {
         double circleArea = AreaCalculator.calculateArea(radius);
         System.out.println("Area of Circle: " + circleArea);
 
-        // Close the scanner
         scanner.close();
     }
 }
