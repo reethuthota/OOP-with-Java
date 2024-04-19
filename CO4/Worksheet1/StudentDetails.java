@@ -1,5 +1,5 @@
-package delete;
 // Create an interface Department containing attributes deptName and deptHead. It also has  methods for printing the attributes. Create a class hostel containing hostelName, hostelLocation and numberOfRooms. The class contains method printing the attributes. Then write Student class extending the Hostel class and implementing the Department interface. This class contains attributes studentName, regdNo, electiveSubject and avgMarks. Write suitable printData method for this class.  Also, implement the  methods of the Department interface.
+package Worksheet1;
 
 import java.util.Scanner;
 
@@ -52,7 +52,7 @@ class Student extends Hostel implements Department {
     }
 }
 
-public class del {
+public class StudentDetails {
     public static void main(String args[]) {
         Scanner scan = new Scanner(System.in);
 
