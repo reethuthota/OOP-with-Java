@@ -1,7 +1,7 @@
 class sample1 {
     int a;
     public int b;
-    // private int c;
+    private int c;
     protected int d;
 }
 

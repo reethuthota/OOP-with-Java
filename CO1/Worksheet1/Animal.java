@@ -6,7 +6,7 @@ public class Animal
     }
     public void run()
     {
-        System.out.println("I am an instance method1pec");
+        System.out.println("I am an instance method");
     }
 
     public static void main(String args[])
@@ -17,6 +17,5 @@ public class Animal
         Animal.run(null);
         Animal animal = new Animal();
         animal.run();
-        System.exit(-1);
     }
 }

@@ -24,14 +24,13 @@ public class EvenOddThreading {
     public static void main(String[] args) {
         EvenNumbers t1 = new EvenNumbers();
         t1.start();
-
+        OddNumbers t2 = new OddNumbers();
+        t2.start();
+        
         try {
             t1.join();
         } catch (Exception e) {
             System.out.println(e);
         }
-
-        OddNumbers t2 = new OddNumbers();
-        t2.start();
     }
 }

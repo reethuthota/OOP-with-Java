@@ -11,7 +11,7 @@ class Course {
     }
 
     public synchronized void getCourseTeacher() {
-        System.out.println("Student A's teacher for " + this.courseName + " is " + this.teacherName);
+        System.out.println("Student's teacher for " + this.courseName + " is " + this.teacherName);
     }
 }
 

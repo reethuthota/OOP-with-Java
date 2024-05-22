@@ -1,4 +1,4 @@
-// Write a Java program to create a class called Car with instance variables company_name, model_name, year, and mileage. Use method assign(….) for assigning the variable values and display() method for displaying all the values of instance variables.
+// Write a Java program to create a class called Car with instance variables company_name, model_name, year, and mileage. Use method assign() for assigning the variable values and display() method for displaying all the values of instance variables.
 
 import java.util.*;
 

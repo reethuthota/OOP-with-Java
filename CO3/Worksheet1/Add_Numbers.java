@@ -18,14 +18,14 @@ public class Add_Numbers {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         
-        System.out.println("Enter two integer values: ");
+        System.out.print("Enter two integer values: ");
         Addition ob=new Addition();
         ob.add(sc.nextInt(),sc.nextInt());
 
-        System.out.println("Enter two integer values and a float value: ");
+        System.out.print("Enter two integer values and a float value: ");
         ob.add(sc.nextInt(),sc.nextInt(),sc.nextFloat());
 
-        System.out.println("Enter three integer values: " );
+        System.out.print("Enter three integer values: " );
         ob.add(sc.nextInt(),sc.nextInt(),sc.nextInt());
 
         sc.close();

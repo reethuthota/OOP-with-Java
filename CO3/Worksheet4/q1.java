@@ -22,7 +22,7 @@ public class q1 {
     public static void main(String[] args) {
         Subclass1 obj1 = new Subclass1();
         obj1.message();
-
+     
         Subclass2 obj2 = new Subclass2();
         obj2.message();
     }

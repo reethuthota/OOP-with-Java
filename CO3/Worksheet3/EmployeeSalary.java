@@ -17,6 +17,7 @@ class HeadIT extends Employee {
         this.yearsWorked = yearsWorked;
     }
 
+    @Override
     void Salary() {
         finalSalary = baseSalary + 1000*yearsWorked;
         System.out.println("Salary : " + finalSalary);
@@ -30,6 +31,7 @@ class Programmer extends Employee {
         this.hoursWorked = hoursWorked;
     }
 
+    @Override
     void Salary() {
         finalSalary = baseSalary + 10*hoursWorked;
         System.out.println("Salary : " + finalSalary);

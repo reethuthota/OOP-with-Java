@@ -15,7 +15,7 @@ class Sorting extends Thread {
         System.out.println("Sorting elements in the array...");
 
         int n = array.length;
-        for (int i = 0; i <  - 1; i++) {
+        for (int i = 0; i < n; i++) {
             for (int j = 0; j < n - i - 1; j++) {
                 if (array[j] > array[j + 1]) {
                     int temp = array[j];
